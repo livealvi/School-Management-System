@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    color: #555;
+    font-size: 16px;
+    line-height: 28px;
+    text-rendering: optimizeLegibility;
+}
+
+
+/* nav */
+.bg-color {
+    background-color: rgb(173, 88, 212);
+}
