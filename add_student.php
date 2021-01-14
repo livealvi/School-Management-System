@@ -36,7 +36,7 @@ include "connection.php";
         echo "<script type='text/javascript'>alert('$messageReg');</script>";
         ?>
         <script type="text/javascript">
-        window.location="register.php";
+        window.location="s_list.php";
         </script>
         <?php
     }else{
