@@ -1,40 +1,15 @@
-<!DOCTYPE html>
-<html>
+<?php
+include "connection.php";
+?>
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Home Page</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- g-fonts -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;900&family=Roboto:wght@300;400;500;700&display=swap"
-    rel="stylesheet">
-  <link
-    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-    rel="stylesheet">
-  <!-- bootstrap -->
-  <link rel="stylesheet" href="vendor/css/bootstrap.min.css">
-  <!-- font-awesome -->
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-  <link rel="stylesheet" href="vendor/css/all.min.css">
-  <link rel="stylesheet" href="vendor/css/fontawesome.min.css">
-  <!-- date-picker -->
+<?php
 
-  <!-- style -->
-  <link rel="stylesheet" href="resource/css/styles.css">
-  <link rel="stylesheet" href="resource/css/sb-admin-2.css">
-</head>
-
-<body>
-
-
-  <?php
-                                        $res = mysqli_query($link, "select *from all_students");
-                                        while ($row = mysqli_fetch_array($res)) {
-                                            echo "<tbody>";
+// $sql = "select * from all_students";
+$result =mysqli_query($link, "select *from all_students");
+if(mysqli_num_rows($result)> 0 ){
+    
+        while ($row = mysqli_fetch_assoc($result)) {
+                                            
                                             echo "<tr>";
                                             echo "<td>";
                                             echo $row["std_id"];
@@ -66,31 +41,14 @@
                                             echo "Null";
                                             echo "</td>";
                                             echo "<td>";
-                                        ?>
-  <?php
+                                            echo "<button class= 'delete-button btn btn-danger' data-id='{$row["std_id"]}'}>Delete</button>";
+                                            
                                             echo "</td>";
                                             echo "</tr>";
-                                            echo "</tbody>";
                                         }
-                                        ?>
-
-
-
-
-
-
-
-
-  <!--Optional JavaScript -->
-  <!-- jQuery-3 -->
-  <script src="vendor/js/jquery-3.5.1.js"></script>
-  <!-- bootstrap-js -->
-  <script src="vendor/js/bootstrap.min.js"></script>
-  <!-- active-js -->
-  <script src="resource/js/active.js"></script>
-
-  <!-- main-js -->
-  <script src="resource/js/sb-admin-2.js"></script>
-</body>
-
-</html>
+                                        
+                                
+}else{
+        echo "<h3>No Record Found.</h3>";
+}
+?>

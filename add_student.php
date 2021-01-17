@@ -36,7 +36,7 @@ include "connection.php";
         echo "<script type='text/javascript'>alert('$messageReg');</script>";
         ?>
         <script type="text/javascript">
-        window.location="s_list.php";
+        window.location="add_student.php";
         </script>
         <?php
     }else{
@@ -69,7 +69,7 @@ include "connection.php";
     <link rel="stylesheet" href="vendor/css/all.min.css">
     <link rel="stylesheet" href="vendor/css/fontawesome.min.css">
     <!-- date-picker -->
-    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+    
     <!-- style -->
     <link rel="stylesheet" href="resource/css/styles.css">
     <link rel="stylesheet" href="resource/css/sb-admin-2.css">
@@ -231,23 +231,15 @@ include "connection.php";
     </div>
     <!-- login-area -->
 
-
-
-
-
-
-
-
-
     <!--Optional JavaScript -->
     <!-- jQuery-3 -->
-    <script src="vendor/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="vendor/js/jquery-3.5.1.js"></script>
     <!-- bootstrap-js -->
     <script src="vendor/js/bootstrap.min.js"></script>
     <!-- active-js -->
     <script src="resource/js/active.js"></script>
     <!-- date-picker-js -->
-    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+     
     <!-- main-js -->
     <script src="resource/js/active.js"></script>
 </body>

@@ -12,7 +12,11 @@ html {
 }
 
 
-/* nav */
-.bg-color {
-    background-color: rgb(173, 88, 212);
+.tab-txt {
+    padding-right: 60px;
+}
+
+.about-info {
+
+    width: 100%;
 }
